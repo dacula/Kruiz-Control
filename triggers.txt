@@ -1,8 +1,16 @@
 OnInit
-Chat Send "Kruiz Control Initialized"
+Chat Send "Welcome everybody"
 
 OnCommand b 0 !example
-Chat Send "Success! It worked!"
+Chat Send "This is just an example"
+
+OnCommand e 0 !pizza
+delay 1
+play 50 wait pizza2.wav
+chat send "I'm a pizza lover"
+
+OnCommand e 0 !sounds
+Chat Whisper {user} "!pizza"
 
 OnCommand b 0 !kcreset
 Reset
