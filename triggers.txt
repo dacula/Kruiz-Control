@@ -1,16 +1,28 @@
 OnInit
 Chat Send "Welcome everybody"
 
-OnCommand b 0 !example
-Chat Send "This is just an example"
+#OnCommand b 0 !example
+#Play 50 wait follow.wav
+#Chat Send "This is just an example"
 
-OnCommand e 0 !pizza
-delay 1
-play 50 wait pizza2.wav
-chat send "I'm a pizza lover"
+#OnCommand e 0 !sounds
+#Chat Whisper {user} "!pizza"
 
-OnCommand e 0 !sounds
-Chat Whisper {user} "!pizza"
+OnSEDonation e 0 
+Play 50 wait tip.wav
+Chat Send "{user} spendet {amount} Euronen! Danke Danke Danke! much apprechitated"
+
+OnSETwitchFollow e 0
+Play 50 wait follow.wav
+Chat Send "{user} followed! Willkommen bei den richtig coolen dudes!"
+
+OnSETwitchBits e 0
+Play 50 wait cheer.wav
+Chat Send "{user} cheered! yeeii!"
+
+OnSETwitchSub e 0
+Play 50 wait sub.wav
+Chat Send "{user} subbed! Danke so sehr!"
 
 OnCommand b 0 !kcreset
 Reset
